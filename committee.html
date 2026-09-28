@@ -117,7 +117,14 @@ h1 {
 </div>
 
 <!-- 25/26 -->
-<h1>(2025/2026)</h1>
+<h1 onclick="toggleSection('section-2025-2026', this)"
+    class="toggle-heading"
+    style="cursor:pointer;">
+  2025/2026 <span id="section-2025-2026-arrow" style="font-size:0.7em;">&#9660;</span>
+</h1>
+
+<div id="section-2025-2026" style="display:block;">
+  
 <div class="w3-row"><br>
 
 <div class="w3-col" style="width:18%">
@@ -214,6 +221,36 @@ function openNav() {
   }
 }
 </script>
+
+<script>
+  function toggleSection(sectionId, headingEl) {
+    var section = document.getElementById(sectionId);
+    var arrow = document.getElementById(sectionId + '-arrow');
+
+    if (!section) {
+      return;
+    }
+
+    // Read the CURRENT rendered state (not just inline style) so this
+    // works correctly the very first time, regardless of how the
+    // element was initially displayed.
+    var isHidden = window.getComputedStyle(section).display === 'none';
+
+    if (isHidden) {
+      section.style.setProperty('display', 'block', 'important');
+      if (arrow) arrow.innerHTML = '&#9660;'; // down arrow (expanded)
+    } else {
+      section.style.setProperty('display', 'none', 'important');
+      if (arrow) arrow.innerHTML = '&#9654;'; // right arrow (collapsed)
+    }
+  }
+</script>
+
+<style>
+  .toggle-heading:hover {
+    opacity: 0.8;
+  }
+</style>
 
 </body>
 </html>
