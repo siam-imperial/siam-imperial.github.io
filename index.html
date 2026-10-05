@@ -119,6 +119,62 @@ In this way, the Chapter provides a unique forum for like-minded and passionate 
 
 <hr style="width:85%; margin:40px auto; border-color:#231F20;">
 
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Become a member</span></div>
+       <!--
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Chicago, US</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +00 1515151515</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  test@test.com</p>
+      -->
+    </div>
+    <div class="w3-col m7">
+      <!--
+        FormSubmit.co setup notes:
+        1. Replace the action URL below with your own target address (already set to
+           siamimperial-ma-ma@groups.imperial.ac.uk).
+        2. The FIRST time the form is ever submitted, FormSubmit sends a one-time
+           confirmation email to that address. Someone must click the confirmation
+           link in it before future submissions will be delivered.
+        3. _subject sets the email subject line.
+        4. _captcha=false disables FormSubmit's captcha confirmation page.
+        5. _template=table makes the received email format the fields nicely.
+        6. _honey is a hidden spam-trap field; leave it in the HTML but never fill it in.
+      -->
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white"
+            action="https://formsubmit.co/siamimperial-ma-ma@groups.imperial.ac.uk"
+            method="POST"
+            target="_blank">
+
+        <!-- Hidden configuration fields for FormSubmit -->
+        <input type="hidden" name="_subject" value="New message from website contact form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input" type="email" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <!-- Committee Container -->
 <div class="w3-container w3-padding w3-center" id="committee">
 <h1>Current Committee (2026/2027)</h1>
